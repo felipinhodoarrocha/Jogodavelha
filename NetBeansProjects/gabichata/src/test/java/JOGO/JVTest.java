@@ -35,15 +35,20 @@ public class JVTest {
         String S = jogo2.Jogada("10", "x");
         Assert.assertEquals("número inválido",S);
     }
-
+    
     @Test
     public void testGanhou() { 
-        JV jogo1 = new JV();
-        String S = jogo1.Ganhou(9);
-        Assert.assertEquals("OPS, deu velha ngm",S);
+        JV jogo1 = new JV();    
+        String x = jogo1.Ganhou(8);    
+        Assert.assertEquals("null",x);
     }
-     
     
+    @Test
+    public void testEmpate() { 
+        JV jogo1 = new JV();
+        String S = jogo1.Ganhou(9);    
+        Assert.assertEquals("OPS, deu velha ngm",S);  
+    }
     
     @Test
     public void testMostrar() {
@@ -51,5 +56,13 @@ public class JVTest {
         String s = jogo1.Mostrar();
         Assert.assertEquals("  1  2  3\n" +"  4  5  6\n" +"  7  8  9\n",s);     
     }
+    
+    @Test
+    public void testMostrarComPosicao() {
+        JV jogo1 = new JV();
+        jogo1.Jogada("5","x");
+        String s = jogo1.Mostrar();
+        Assert.assertEquals("  1  2  3\n" +"  4  x  6\n" +"  7  8  9\n",s);     
+    }   
 }
  

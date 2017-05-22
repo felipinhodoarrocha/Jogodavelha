@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package JOGO;
 
 public class JV {
@@ -35,8 +31,8 @@ public class JV {
  ///////////////////////////////////////////////////////////////////////////////
  //onde p é a posicão na matriz e j o elemento x ou 0
     public String Jogada(String p, String j){
-        String l = " fas" ;    
-        
+        String l = " fas" ;  
+  
         if(p.equals("1")){
             m[0][0] = j;
         }else if(p.equals("2")){
@@ -61,8 +57,7 @@ public class JV {
                 && !p.equals("5") && !p.equals("4") && !p.equals("3") && !p.equals("2")
                 && !p.equals("1")){
             l = "número inválido";
-        }
-        
+        }     
         return l;
     }
  ///////////////////////////////////////////////////////////////////////////////
@@ -91,8 +86,8 @@ public class JV {
                 vencedor = " Jogador 1";
             }else if(T[i].equals("000")){
                 vencedor = " Jogador 2";
-            }
-        }
+            }   
+        }              
         return vencedor;
     }
     
